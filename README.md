@@ -1,12 +1,11 @@
 # :chart_with_upwards_trend: Retrospective Tools App 
+## :small_orange_diamond: [Link](https://annavasylashko.github.io/retrospective-tools/) to web application 
 ## Table of contents:
 - [x] [Preview](#app-preview)
 - [x] [Description](#description)
 - [x] [Comments](#comments)
 - [x] [Credits](#credits)
 - [x] [Getting Started](#getting-started-with-create-react-app)
-
-## :small_orange_diamond: [Link](https://annavasylashko.github.io/retrospective-tools/) to web application 
 
 ## App preview
 ![preview](https://github.com/annavasylashko/retrospective-tools/blob/main/public/preview.PNG)
