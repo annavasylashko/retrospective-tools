@@ -1,7 +1,7 @@
 import React from "react";
-import './style.css';
-import RetroCard from '../RetroCard/RetroCard';
-import NewCard from '../NewCard/NewCard'
+import "./style.css";
+import RetroCard from "../RetroCard/RetroCard";
+import NewCard from "../NewCard/NewCard";
 
 class CardColumn extends React.Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class CardColumn extends React.Component {
 
     this.state = {
       list: [],
-      isAddingNewCard: false
+      isAddingNewCard: false,
     };
 
     this.createCard = this.createCard.bind(this);
@@ -24,36 +24,40 @@ class CardColumn extends React.Component {
   createCard(card) {
     this.setState((state) => ({
       list: [...state.list, card],
-      isAddingNewCard: false
-    }))
+      isAddingNewCard: false,
+    }));
 
-    this.sortList()
+    this.sortList();
   }
 
   // Delete card
 
   onDelete(id) {
-    this.setState({list: this.state.list.filter((element) => element.id !== id)})
+    this.setState({
+      list: this.state.list.filter((element) => element.id !== id),
+    });
   }
 
   // Show input on add button click
 
   showInput() {
-    this.setState({isAddingNewCard: true})
+    this.setState({ isAddingNewCard: true });
   }
 
   // Update card
 
   onCardChanged(cardToChange) {
-    let index = this.state.list.findIndex((card) => card.id === cardToChange.id)
+    let index = this.state.list.findIndex(
+      (card) => card.id === cardToChange.id
+    );
 
     if (index !== -1) {
-      let listCopy = this.state.list
-      listCopy[index] = cardToChange
+      let listCopy = this.state.list;
+      listCopy[index] = cardToChange;
 
       this.setState((state) => ({
-        list: listCopy
-      }))
+        list: listCopy,
+      }));
     }
   }
 
@@ -61,10 +65,10 @@ class CardColumn extends React.Component {
 
   sortList() {
     this.setState((state) => ({
-        list: state.list.sort(function (a, b) {
-            return b.rating - a.rating;
-        })
-    }))
+      list: state.list.sort(function (a, b) {
+        return b.rating - a.rating;
+      }),
+    }));
   }
 
   render() {
@@ -75,17 +79,31 @@ class CardColumn extends React.Component {
     return (
       <div className="container">
         <div className="container-top">
-          <h1 style={{color: cardColor}}>{this.props.value}</h1>
+          <h1 style={{ color: cardColor }}>{this.props.value}</h1>
           <div className="card-count">{list.length}</div>
         </div>
-        { this.state.isAddingNewCard === false && <button className="add-card" onClick={showInput}>+ Write note</button> }
-        { this.state.isAddingNewCard === true && <NewCard onSubmit={createCard}/> }
+        {this.state.isAddingNewCard === false && (
+          <button className="add-card" onClick={showInput}>
+            + Write note
+          </button>
+        )}
+        {this.state.isAddingNewCard === true && (
+          <NewCard onSubmit={createCard} />
+        )}
         <div className="card-container">
-          {list.map((card) => <RetroCard key={card.id} card={card} cardColor={cardColor} onDelete={onDelete} onCardChanged={onCardChanged} />)}
+          {list.map((card) => (
+            <RetroCard
+              key={card.id}
+              card={card}
+              cardColor={cardColor}
+              onDelete={onDelete}
+              onCardChanged={onCardChanged}
+            />
+          ))}
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default CardColumn
+export default CardColumn;

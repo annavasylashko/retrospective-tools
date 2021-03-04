@@ -1,12 +1,12 @@
 import React from "react";
-import './style.css'
+import "./style.css";
 
 class NewCard extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      value: '',
+      value: "",
     };
 
     this.changeText = this.changeText.bind(this);
@@ -18,47 +18,47 @@ class NewCard extends React.Component {
 
   changeText(event) {
     this.setState(() => ({
-      value: event.target.value
-    }))
+      value: event.target.value,
+    }));
   }
 
   // Check if new card content is empty
 
   validate(text) {
-    return text.trim().length > 0
+    return text.trim().length > 0;
   }
 
   // Create new card
 
   onAddCard() {
     if (this.validate(this.state.value)) {
-      let body = this.state.value
-      let date = new Date()
+      let body = this.state.value;
+      let date = new Date();
 
       let newCard = {
         id: performance.now(),
         text: body,
         date: date,
         rating: 0,
-      }
+      };
 
-      this.props.onSubmit(newCard)
+      this.props.onSubmit(newCard);
 
       this.setState({
-        value: '',
-      })
+        value: "",
+      });
 
-      return
+      return;
     }
 
-    alert("Input value didn't pass validation")
+    alert("Input value didn't pass validation");
   }
 
   // Add card creation on key "Enter"
 
   onEnter(event) {
-    if(event.charCode === 13) {
-      this.onAddCard()
+    if (event.charCode === 13) {
+      this.onAddCard();
     }
   }
 
@@ -67,8 +67,18 @@ class NewCard extends React.Component {
     const { value } = this.state;
     return (
       <div className="newCard">
-        <input type="text" value={value} className="new-card-input" onChange={changeText} onKeyPress={onEnter} placeholder="Add description..."/>
-        <button className="new-card-btn" onClick={onAddCard}>+</button>
+        <input
+          type="text"
+          value={value}
+          className="new-card-input"
+          onChange={changeText}
+          onKeyPress={onEnter}
+          placeholder="Add description..."
+          autofocus
+        />
+        <button className="new-card-btn" onClick={onAddCard}>
+          +
+        </button>
       </div>
     );
   }
