@@ -1,4 +1,37 @@
-# Getting Started with Create React App
+# :chart_with_upwards_trend: Retrospective Tools App 
+## Table of contents:
+- [x] [Preview](#app-preview)
+- [x] [Description](#description)
+- [x] [Comments](#comments)
+- [x] [Credits](#credits)
+- [x] [Getting Started](#getting-started-with-create-react-app)
+
+## :small_orange_diamond: [Link](https://annavasylashko.github.io/retrospective-tools/) to web application 
+
+## App preview
+![preview](https://github.com/annavasylashko/retrospective-tools/blob/main/public/preview.PNG)
+
+## Description 
+These retrospective tools participate in enhancing your retrospectives, better organizing them, and following up actions over time.<br>It contains:
+- [x] Visually, the application is divided into three identical columns (*"Good things", "Bad things" & "Action items"*), each contains an "Add" button and a list of added comments;
+- [x] Each column is the same *reusable component* in which the name and background color are *configured*;
+
+- [x] When you click the "Add" button, a form with a text box and a "Create" button *appears in its place*.
+- [x] After writing the text, by clicking on the "Create" button, the comment appears in the proper column, the form disappears and the "Add" button returns to its place;
+- [x] The top of each column shows the *name* of that column and the *number of comments* there;
+- [x] The comment is a *reusable component*.
+- [x] Each comment card contains a *rating counter*, which by default has a value of *0*;
+- [x] The card shows the *date and time* the comment was created.
+- [x] The cards within the column are *sorted by rating*, from top to bottom.
+
+## Comments:
+:small_blue_diamond: One of this app's advantage is minimalistic, dark theme design.<br>:small_blue_diamond: Improvement of mobile adaptation is planned for future development.
+
+## Credits:
+Created by [Anna Vasylashko]()
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
