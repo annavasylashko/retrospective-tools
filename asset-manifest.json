@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/retrospective-tools/static/css/main.4b83da67.chunk.css",
+    "main.css": "/retrospective-tools/static/css/main.5a2657c3.chunk.css",
     "main.js": "/retrospective-tools/static/js/main.01822e7f.chunk.js",
     "main.js.map": "/retrospective-tools/static/js/main.01822e7f.chunk.js.map",
     "runtime-main.js": "/retrospective-tools/static/js/runtime-main.ae24d827.js",
@@ -10,13 +10,13 @@
     "static/js/3.fb6f5a2e.chunk.js": "/retrospective-tools/static/js/3.fb6f5a2e.chunk.js",
     "static/js/3.fb6f5a2e.chunk.js.map": "/retrospective-tools/static/js/3.fb6f5a2e.chunk.js.map",
     "index.html": "/retrospective-tools/index.html",
-    "static/css/main.4b83da67.chunk.css.map": "/retrospective-tools/static/css/main.4b83da67.chunk.css.map",
+    "static/css/main.5a2657c3.chunk.css.map": "/retrospective-tools/static/css/main.5a2657c3.chunk.css.map",
     "static/js/2.a7471c8c.chunk.js.LICENSE.txt": "/retrospective-tools/static/js/2.a7471c8c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ae24d827.js",
     "static/js/2.a7471c8c.chunk.js",
-    "static/css/main.4b83da67.chunk.css",
+    "static/css/main.5a2657c3.chunk.css",
     "static/js/main.01822e7f.chunk.js"
   ]
 }
